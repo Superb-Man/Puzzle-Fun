@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Selector</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+        }
+        .card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+            background-color: aquamarine;
+            font-weight: bold;
+        }
+        .btn-primary {
+            background-color:black;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background-color: #343a40;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="mb-4">Choose a Game</h1>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">N-Puzzle</h5>
+                        <p class="card-text">Solve the N-Puzzle using heuristics.</p>
+                        <a href="N-puzzle/index.html" class="btn btn-primary">Play</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tower of Hanoi</h5>
+                        <p class="card-text">Move the disks to solve the puzzle.</p>
+                        <a href="Hanoi/index.html" class="btn btn-primary">Play</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">DX-Ball</h5>
+                        <p class="card-text">Break all the bricks with the ball.</p>
+                        <a href="DX-Ball/index.html" class="btn btn-primary">Play</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Nim Game</h5>
+                        <p class="card-text">Outsmart your opponent in Nim.</p>
+                        <a href="Nim-Gmae/index.html" class="btn btn-primary">Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

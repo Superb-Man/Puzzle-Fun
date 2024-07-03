@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .tower {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 20px;
+            position: relative;
+        }
+        .rod {
+            width: 10px;
+            background-color: #000;
+            height: 200px;
+            position: relative;
+            /* margin: 0 50px; */
+        }
+        .disk {
+            position: absolute;
+            bottom: 0;
+            background-color: black;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            transition: transform 1s ease;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .controls button {
+            margin: 0 10px;
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            margin-bottom: 20px;
+        }
+        .move-list {
+            margin-top: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #startBtn {
+            background-color: black;
+            border-radius: 5px;
+        }
+        #pauseBtn {
+            background-color: red;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Tower of Hanoi</h1>
+        <div class="info">
+            <div>Disks: <input type="number" id="numDisks" value="3" min="3" max="10" style="width: 50px;"></div>
+            <div>Moves: <span id="moveCount">0</span></div>
+        </div>
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">Start Animation</button>
+            <button id="pauseBtn" class="btn btn-success">Pause</button>
+        </div>
+        <div class="tower mt-4">
+            <div id="rod1" class="rod"></div>
+            <div id="rod2" class="rod"></div>
+            <div id="rod3" class="rod"></div>
+        </div>
+        <ul id="moveList" class="move-list"></ul> <!-- Move list -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

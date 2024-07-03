@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N-Puzzle Solver</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        canvas {
+            margin: 20px 0;
+            /* border: 1px solid #ccc; */
+            border-radius: 10px;
+            /* background-color: #fff; */
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .tile {
+            border-radius: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+        .tile:hover {
+            cursor: pointer;
+            background-color: aquamarine;
+        }
+
+        #startButton {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color:black;
+            color: white;
+        }
+        #solveButton {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+        #solveButton:disabled {
+            cursor: not-allowed;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button id="startButton">Play Game</button>
+        <button id="solveButton">Bot Solve</button>
+    </div>
+    <canvas id="puzzleCanvas"></canvas>
+    <script src="./script.js"></script>
+</body>
+</html>
